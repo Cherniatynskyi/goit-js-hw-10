@@ -6,12 +6,12 @@ import { fetchCountries } from './fetch';
 const DEBOUNCE_DELAY = 300;
 
 const refs = {
-    input: document.querySelector('#search-box'),
-    list: document.querySelector('.country-list'),
-    box: document.querySelector('.country-info'),
+    inputEl: document.querySelector('#search-box'),
+    listEl: document.querySelector('.country-list'),
+    infoEl: document.querySelector('.country-info'),
 }
 
-refs.input.addEventListener('input', debounce(onInputSearch, DEBOUNCE_DELAY));
+refs.inputEl.addEventListener('input', debounce(onInputSearch, DEBOUNCE_DELAY));
 
 
 function onInputSearch(e){
@@ -69,10 +69,10 @@ function generateMarkup(array) {
 
 function insertMarkup(array) {
     const result = generateMarkup(array);
-    refs.list.insertAdjacentHTML('beforeend', result);
+    refs.listEl.insertAdjacentHTML('beforeend', result);
 }
 
 function cleanMarkup(){
-    refs.list.innerHTML = "";
-    refs.box.innerHTML = "";
+    refs.listEl.innerHTML = "";
+    refs.infoEl.innerHTML = "";
 }
