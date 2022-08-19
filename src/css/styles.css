@@ -10,6 +10,12 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+
+  background-image: url(../img/6095261.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #search-box {
@@ -17,4 +23,66 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+
+  border-radius: 8px;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  margin: 250 300 0 300;
+
+  border-radius: 16px;
+  background-color: rgba(69, 80, 112, 0.95);
+}
+.country-list{
+  padding: 0;
+}
+
+.markup-item{
+  list-style: none;
+  display: flex;
+
+  margin-top: 30px;
+  max-height: 40px;
+  color: white;
+}
+
+.full-card{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.flag-icon-preview{
+  width: 60px;
+  border-radius: 7px;
+}
+
+.flag-icon{
+  width: 100px;
+  height: 60px;
+  border-radius: 6px;
+}
+
+.country-name{
+  font-size: 20px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.country-info-board{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.country-name-preview{
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
 }
