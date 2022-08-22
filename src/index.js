@@ -19,7 +19,6 @@ function onInputSearch(e){
     const nameCountry = e.target.value.trim().toLowerCase();
 
     if(nameCountry === "") {
-      cleanMarkup()
       return;
     }  
     fetchCountries(nameCountry)
@@ -53,7 +52,7 @@ const createOverwiewMarkup = item => `
 
 
 function generateMarkup(array) {
-    if(array.length > 10) {
+  if (array.length > 10) {
         Notiflix.Notify.warning(
           "Too many matches found. Please enter a more specific name.")
     } 
@@ -68,8 +67,11 @@ function generateMarkup(array) {
 
 
 function insertMarkup(array) {
-    const result = generateMarkup(array);
+  const result = generateMarkup(array);
+  if (result) {
     refs.listEl.insertAdjacentHTML('beforeend', result);
+  }
+    
 }
 
 function cleanMarkup(){
